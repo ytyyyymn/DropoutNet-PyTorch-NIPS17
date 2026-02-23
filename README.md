@@ -1,3 +1,28 @@
+## 📦 数据集下载与配置 (Dataset)
+
+由于 RecSys 2017 (XING) 数据集体积巨大（包含 1900 万条交互与高维稀疏特征），超出了 GitHub 的单文件限制，因此未包含在本仓库中。请按照以下步骤自行获取并配置数据：
+
+### 1. 获取数据集
+* **官方/开源数据源**: 来源于 [RecSys Challenge 2017](http://www.recsyschallenge.com/2017/) 及原作者 Layer6 提供的处理后版本。
+* **网盘备用下载 (推荐)**: [点击这里填写你的百度网盘/阿里云盘分享链接] (提取码: [填写提取码])
+
+### 2. 存放位置
+将下载好的数据集解压，并确保文件夹命名为 `recsys2017.pub`。请将其放置在项目根目录的 `data/` 文件夹下。完整的目录结构应该如下所示，否则 `dataset.py` 将无法正确寻址：
+
+```text
+DropoutNet-PyTorch/
+├── data/
+│   └── recsys2017.pub/
+│       ├── eval/
+│       │   ├── warm/
+│       │   ├── cold_user/
+│       │   └── cold_item/
+│       ├── interactions.csv
+│       ├── item_features_0based.txt
+│       └── user_features_0based.txt
+├── model.py
+...
+
 🛠️ 环境依赖 (Requirements)
 Python 3.8+
 
